@@ -54,7 +54,21 @@ NodeJS RESTful API has following endpoints
       1. MongoDB is running
       2. A database named: db-users is created
       
-      
+   ## Running the applicaton
+   
+    1. Do a git clone of application
+    2. CD into Server: do `npm install`
+    3. Type `nodemon app.js`
+    4. Server is running
+    
+    5. CD into front-end directory
+    6. type`npm install`
+    7. type `ng build`
+    8. type `ng serve --port 4201`
+    
+    Both front and backend are running
+    
+    
       
   
   

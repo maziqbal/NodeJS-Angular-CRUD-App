@@ -33,9 +33,10 @@ NodeJS RESTful API has following endpoints
   
   --------------------------------------------------------
   
-  ## Front End
+  # Angular Front End application
   
-  Front end application is developed using Angular and Material CSS. With core component app has a 
+  Front end application is developed using Angular and Material CSS. 
+  App has:
   
   ### User Component
     User compnent has 4 files
@@ -49,23 +50,23 @@ NodeJS RESTful API has following endpoints
     This service has number of methods that connect to the server RESTful endpoints
       
   
-  ## Database
+  # Database
      MongoDB DBMS is used as data store for thsi application.
      Before running this app make sure:
       1. MongoDB is running
       2. A database named: db-users is created
       
-   ## Running the applicaton
+   # Running the applicaton
    
     1. Do a git clone of application
     2. CD into Server: do `npm install`
-    3. Type `nodemon app.js`
+    3. Type nodemon app.js
     4. Server is running
     
     5. CD into front-end directory
-    6. type`npm install`
-    7. type `ng build`
-    8. type `ng serve --port 4201`
+    6. type npm install
+    7. type ng build
+    8. type ng serve --port 4201
         
     
       

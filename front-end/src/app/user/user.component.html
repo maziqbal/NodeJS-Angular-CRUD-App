@@ -1,0 +1,105 @@
+
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content white-text">
+        <div class="row">
+          <div class="col s12">
+            <div class="card-content valign center">
+             <h2>NodeJs - Angular CRUD API</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s5">
+            <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="userService.selectedUser._id">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="first_name" #name="ngModel" [(ngModel)]="userService.selectedUser.first_name" placeholder="Enter first name" required>
+                  <label>First Name:
+                    <label class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="last_name" #name="ngModel" [(ngModel)]="userService.selectedUser.last_name" placeholder="Enter last name">
+                  <label>Last Name:</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="email" name="email" #name="ngModel" [(ngModel)]="userService.selectedUser.email" placeholder="Enter email">
+                  <label>Email:
+                    <label class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="password" name="password" #name="ngModel" [(ngModel)]="userService.selectedUser.password" placeholder="Enter password">
+                  <label>Password:
+                    <label class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="phone" #name="ngModel" [(ngModel)]="userService.selectedUser.phone" placeholder="Enter phone number">
+                  <label>Phone number:
+                    <label class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="address" name="address" #name="ngModel" [(ngModel)]="userService.selectedUser.address" placeholder="Enter address" class="materialize-textarea"></textarea>
+                  <label>Address:
+                    <label class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn btn-custom right" type="button" (click)="resetForm(userForm)">Reset</button>
+                  <button class="btn btn-custom right" type="submit" [disabled]="!userForm.valid">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col s7">
+            <table class="responsive-table highlight">
+              <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Phone</th>
+                <th>Address</th>
+              </tr>
+              </thead>
+              <tr *ngFor="let user of userService.users">
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td>******</td>
+                <td>{{user.phone}}</td>
+                <td title="{{user.address}}">{{user.address| slice:0:4}} ...</td>
+                <td>
+                  <a class="action-btn" (click)="onEdit(user)">
+                    <i class="material-icons">edit</i>
+                  </a>
+                  <a class="action-btn" (click)="onDelete(user._id,userForm)">
+                    <i class="material-icons">delete</i>
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

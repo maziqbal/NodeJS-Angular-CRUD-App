@@ -3,7 +3,7 @@ This is a NodeJS - Angular CRUD app
 
 ## This applicaton has a NodJS backend and Angular JS front end
 
-### NodeJS RESTful API
+## NodeJS RESTful Backend API
 
 NodeJS RESTful API has following endpoints
   
@@ -39,13 +39,14 @@ NodeJS RESTful API has following endpoints
   
   ### User Component
     User compnent has 4 files
-    1. user.component.ts
+    1. user component file
     2. user component html file
     3. user component styles file
     4. user component spec file
     
    ### User Service
-      A user service is added to connect with the backend. This service has number of methods that connect to the server RESTful endpoints
+    A user service is added to connect with the backend.
+    This service has number of methods that connect to the server RESTful endpoints
       
   
   ## Database
@@ -65,9 +66,7 @@ NodeJS RESTful API has following endpoints
     6. type`npm install`
     7. type `ng build`
     8. type `ng serve --port 4201`
-    
-    Both front and backend are running
-    
+        
     
       
   

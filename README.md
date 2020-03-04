@@ -19,7 +19,7 @@ NodeJS RESTful API has following endpoints
  ### App Entry Script
   app.js is entry point for the app. this script connects to the datbase server and creats an HTTP server that listens on port 3000
   
- ###Directory structure:
+ ### Backend Directory structure:
   Controllers
     Contains - UserController.js
     This file contains application logic for different RESTful routes
@@ -33,22 +33,22 @@ NodeJS RESTful API has following endpoints
   
   --------------------------------------------------------
   
-  ##Front End
+  ## Front End
   
   Front end application is developed using Angular and Material CSS. With core component app has a 
   
-  ###User Component
+  ### User Component
     User compnent has 4 files
     1. user.component.ts
     2. user component html file
     3. user component styles file
     4. user component spec file
     
-   ###User Service
+   ### User Service
       A user service is added to connect with the backend. This service has number of methods that connect to the server RESTful endpoints
       
   
-  ##Database
+  ## Database
      MongoDB DBMS is used as data store for thsi application.
      Before running this app make sure:
       1. MongoDB is running
